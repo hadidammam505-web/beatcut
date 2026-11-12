@@ -144,5 +144,5 @@ def align(cuts: list[float], marks: list[float]) -> list[dict]:
             continue
         j = int(np.argmin(np.abs(m - c)))
         out.append({"cut": round(c, 4), "nearest": round(float(m[j]), 4),
-                    "offset_ms": int(round((c - m[j]) * 1000))})
+                    "offset_ms": round(float(c - m[j]) * 1000)})
     return out
