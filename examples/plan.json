@@ -1,0 +1,24 @@
+{
+  "output": "out/gym-edit.mp4",
+  "size": [1920, 1080],
+  "fps": 30,
+  "grade": "dark-vivid",
+  "song": { "path": "song.wav", "start": 12.4, "gain_db": -2, "fade_out": 0.6 },
+  "shots": [
+    { "src": "clips/leg-extension.mov", "start": 22.7, "duration": 0.70,
+      "crop": { "size": 0.80, "x": 0.05, "y": 0.08 }, "motion": "push", "grade": "dark" },
+    { "src": "clips/leg-extension.mov", "start": 27.4, "duration": 1.10,
+      "crop": { "size": 0.58, "x": 0.17, "y": 0.15 }, "motion": "push", "grade": "dark" },
+    { "src": "clips/leg-extension.mov", "start": 30.8, "duration": 0.68,
+      "crop": { "size": 0.42, "x": 0.29, "y": 0.20 }, "motion": "push", "grade": "dark" },
+    { "src": "clips/leg-extension.mov", "start": 34.0, "duration": 0.90,
+      "crop": { "size": 0.28, "x": 0.39, "y": 0.22 }, "motion": "punch", "transition": "flash" },
+    { "src": "clips/leg-extension.mov", "start": 41.6, "duration": 2.10,
+      "crop": { "size": 0.85, "x": 0.02, "y": 0.08 }, "motion": "pull" },
+    { "src": "clips/chest.mov", "start": 20.0, "duration": 1.72, "transition": "flash" },
+    { "src": "clips/biceps.mov", "start": 32.0, "duration": 1.00 },
+    { "src": "clips/back.mov", "start": 72.5, "duration": 1.78, "transition": "fade" },
+    { "src": "clips/chest.mov", "start": 48.1, "duration": 1.28,
+      "crop": { "size": 0.80, "x": 0.04, "y": 0.0 }, "motion": "push", "grade": "mono" }
+  ]
+}
