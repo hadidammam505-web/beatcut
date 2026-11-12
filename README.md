@@ -1,7 +1,7 @@
 # beatcut ✂️🥁
 
 [![CI](https://github.com/hadidammam505-web/beatcut/actions/workflows/ci.yml/badge.svg)](https://github.com/hadidammam505-web/beatcut/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Dependencies](https://img.shields.io/badge/dependencies-numpy%20%2B%20ffmpeg-informational)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
