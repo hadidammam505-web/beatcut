@@ -53,7 +53,7 @@ def motion_filter(motion: str, frames: int, fps: int, size: tuple[int, int]) -> 
     elif motion == "pull":         # starts close and eases out to reveal the whole rep
         z = f"1+0.6*pow(1-min(1\\,on/({n}*0.8))\\,2)"
     elif motion == "punch":        # fast punch-in over 0.35 s, then hold
-        p = max(1, round(0.35 * fps))
+        p = max(1, int(0.35 * fps + 0.5))   # round half up: round() would give 10 frames at 30 fps
         z = f"1+0.25*min(1\\,on/{p})"
     else:
         raise ValueError(motion)
