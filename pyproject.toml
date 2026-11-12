@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beatcut"
+version = "0.1.0"
+description = "Code-first, beat-synced video editing: copy a reference edit's cuts and rhythm, then render your own footage with ffmpeg."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "hadidammam505-web" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+keywords = ["video-editing", "ffmpeg", "beat-detection", "scene-detection", "montage", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Video :: Non-Linear Editor",
+  "Environment :: Console",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.scripts]
+beatcut = "beatcut.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hadidammam505-web/beatcut"
+Issues = "https://github.com/hadidammam505-web/beatcut/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
