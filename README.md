@@ -48,7 +48,7 @@ beatcut --version
 ```bash
 # 1. Measure the reference: cuts, tempo, onsets, and how tight its cuts are to the music
 beatcut analyze reference.mp4 -o ref.json
-#   tempo 128.0 BPM; 17 cuts: median |offset| 11 ms, worst 38 ms, 17 within 40 ms
+#   prints the tempo, the number of cuts, and the median / worst cut-to-onset offset
 
 # Letterboxed reference? Compare only the picture area, because the bars hide the cuts
 beatcut analyze reference.mp4 --crop 0 0.3 1 0.7 -o ref.json
@@ -59,8 +59,8 @@ beatcut scaffold ref.json clips/ --song song.wav -o plan.json
 # 3. Open plan.json and set each shot's "start" to a real moment (a full, hard rep).
 #    Add crops, motion and transitions. Then check it:
 beatcut check plan.json
-#   9 shots, 337 frames, 11.23s at 1920x1080 30fps, grade dark-vivid
-#   cuts vs song onsets: 8 cuts: median |offset| 14 ms, worst 31 ms, 8 within 40 ms
+#   prints shots, frames, length and size, lists missing files,
+#   and how far each cut is from the song's onsets
 
 # 4. Render a fast preview, then the real thing
 beatcut build plan.json --preview
